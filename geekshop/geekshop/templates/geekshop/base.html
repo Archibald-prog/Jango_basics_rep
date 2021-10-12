@@ -1,13 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Магазин</title>
-	{% load static %}
-    {% block css %}
+	<title>
+    {% block title %}
+    {{ title|title }}
     {% endblock %}
+    </title>
+
+    {% block css %}
     <link rel="stylesheet" type="text/css" href="{%static 'geekshop/style.css'%}">
 	<link rel="stylesheet" href="{%static 'geekshop/fonts/font-awesome/css/font-awesome.css'%}">
+    {% endblock %}
 </head>
 <body>
 	<div class="container">
