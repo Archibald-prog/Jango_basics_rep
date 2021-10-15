@@ -9,11 +9,7 @@
 		<div class="hero">
 			<div class="header clearfix">
 				<a href="/" class="logo"></a>
-				<ul class="menu">
-					<li><a href="{% url 'main' %}">домой</a></li>
-					<li><a href="{% url 'products' %}">продукты</a></li>
-					<li><a href="{% url 'contacts' %}" class="active">контакты</a></li>
-				</ul>
+				{% include 'geekshop/includes/menu.html' %}
 				<a href="#" class="search"></a>
                 <a href="#" class="basket"></a>
 			</div>
