@@ -1,7 +1,9 @@
-from django.contrib.auth.models import User
+
 from django.core.management.base import BaseCommand
 import json
 import os
+
+from authapp.models import ShopUser
 from mainapp.models import ProductCategory, Product, Contact
 
 
@@ -38,4 +40,6 @@ class Command(BaseCommand):
             new_contact.save()
 
 
-super_user = User.objects.create_superuser('admin', 'admin@geekshop.local', '123')
+super_user = ShopUser.objects.create_superuser('admin', 'admin@geekshop.local', '123', age=30)
+if super_user:
+    print('Super user created.')
