@@ -1,8 +1,5 @@
-
 from django.core.management.base import BaseCommand
-import json
-import os
-
+import json, os
 from authapp.models import ShopUser
 from mainapp.models import ProductCategory, Product, Contact
 
