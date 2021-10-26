@@ -10,7 +10,11 @@
 <div class="hero-white">
     <div class="header clearfix">
         <a href="/" class="logo"></a>
-        {% include 'geekshop/includes/menu.html' %}
+        <ul class="menu">
+            <li><a href="/">домой</a></li>
+            <li><a href="/products/" class="active">продукты</a></li>
+            <li><a href="/contacts/">контакты</a></li>
+        </ul>
         <a href="#" class="search"></a>
         <a href="#" class="basket"></a>
     </div>
@@ -23,6 +27,7 @@
           <th scope="col">Товар</th>
           <th scope="col">Количество</th>
           <th scope="col">Стоимость</th>
+          <th scope="col">Удалить</th>
         </tr>
       </thead>
       <tbody>
@@ -32,6 +37,7 @@
           <td>{{ item.product.name }}</td>
           <td>{{ item.quantity }}</td>
           <td>{{ item.product.price }}</td>
+          <td><a href="{% url 'basket:remove' item.pk %}">X</a></td>
         </tr>
       {% endfor %}
       </tbody>
