@@ -23,11 +23,15 @@ def main(request):
 
 def contacts(request):
     title = "Контакты"
+    basket = []
+    if request.user.is_authenticated:
+        basket = Basket.objects.filter(user=request.user)
 
     contacts = Contact.objects.all()[:3]
 
     context = {
         'title': title,
         'contacts': contacts,
+        'basket': basket,
     }
     return render(request, 'geekshop/contact.html', context)
