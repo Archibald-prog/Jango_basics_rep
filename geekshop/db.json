@@ -1,0 +1,158 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "v1mv2ivj6ktw9w4xdq99vgne9l93nliq",
+    "fields": {
+      "session_data": ".eJxVjDkOwjAUBe_iGlle8hObkp4zWH9xcAA5UpxUiLtDpBTQvpl5L5VwW0vaWl7SJOqsrDr9boT8yHUHcsd6mzXPdV0m0ruiD9r0dZb8vBzu30HBVr61BzGGnBExjmNgYgoQI3APYFlGRnEGbQ4Uch-7jgZxjgdPgH70FtT7A-60OCE:1mafn4:mgH1o3yjJcEPFJ8RU3TI7iJD2IVREuRG79L3QEJk0j0",
+      "expire_date": "2021-10-27T15:03:34.391Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "���",
+      "description": "��� ��������� ��������� ������",
+      "created": "2021-10-14T18:14:09.594Z",
+      "updated": "2021-10-14T18:14:19.027Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "���",
+      "description": "������ ��� ����",
+      "created": "2021-10-14T18:15:10.347Z",
+      "updated": "2021-10-14T18:15:36.458Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "����",
+      "description": "������ ��� �����",
+      "created": "2021-10-14T18:16:27.337Z",
+      "updated": "2021-10-14T18:16:27.337Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 4,
+    "fields": {
+      "name": "������",
+      "description": "������ � ����� ������",
+      "created": "2021-10-14T18:16:53.609Z",
+      "updated": "2021-10-14T18:16:53.609Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 5,
+    "fields": {
+      "name": "��������",
+      "description": "������ � ������������ �����",
+      "created": "2021-10-14T18:17:20.890Z",
+      "updated": "2021-10-14T18:17:20.890Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 4,
+      "name": "������� ����",
+      "image": "products_images/product-2.jpg",
+      "short_desc": "�������� ���� ��� ������",
+      "description": "�������� ������� �� ����� ����",
+      "price": "600.00",
+      "quantity": 100
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 3,
+      "name": "����� �����",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "�������� �����",
+      "description": "������ � �������� ����",
+      "price": "100.00",
+      "quantity": 10
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "����� �����",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "M����� �����",
+      "description": "� ����� ������ ���������� ������",
+      "price": "3000.00",
+      "quantity": 3
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "������",
+      "image": "products_images/product-3.jpg",
+      "short_desc": "������ �����",
+      "description": "������� ��� ��� �����",
+      "price": "800.00",
+      "quantity": 60
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "name": "����� ���������� ����",
+      "image": "products_images/product-41.jpg",
+      "short_desc": "������ �������� �� �����",
+      "description": "Must have � ������ ����",
+      "price": "68.00",
+      "quantity": 120
+    }
+  },
+  {
+    "model": "mainapp.contact",
+    "pk": 1,
+    "fields": {
+      "name": "Contact-1",
+      "city": "������",
+      "phone": "+7-888-888-8888",
+      "email": "info@geekshop.ru",
+      "address": "� �������� ����"
+    }
+  },
+  {
+    "model": "mainapp.contact",
+    "pk": 2,
+    "fields": {
+      "name": "Contact-2",
+      "city": "�����-���������",
+      "phone": "+7-888-999-8800",
+      "email": "furn_shop@mail.ru",
+      "address": "� �������� ���"
+    }
+  },
+  {
+    "model": "mainapp.contact",
+    "pk": 3,
+    "fields": {
+      "name": "Contact-3",
+      "city": "������������",
+      "phone": "+7-878-878-8877",
+      "email": "furnit_shop@gmail.com",
+      "address": "����� ������"
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+      "name": "Contact-1",
+      "city": "Москва",
+      "phone": "+7-888-888-8888",
+      "email": "info@geekshop.ru",
+      "address": "В пределах МКАД"
+  },
+  {
+      "name": "Contact-2",
+      "city": "Санкт-Петербург",
+      "phone": "+7-888-999-8800",
+      "email": "furn_shop@mail.ru",
+      "address": "В пределах КАД"
+  },
+  {
+      "name": "Contact-3",
+      "city": "Екатеринбург",
+      "phone": "+7-878-878-8877",
+      "email": "furnit_shop@gmail.com",
+      "address": "Центр города"
+  }
+]
