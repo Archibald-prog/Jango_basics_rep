@@ -4,11 +4,11 @@
 {% block content %}
 <main>
     <div class="container-fluid">
-        <h1 class="mt-4">Категории товаров</h1>
+        <h1 class="mt-4">Товары</h1>
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table mr-1"></i>
-                Категории
+                Товары
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -16,7 +16,8 @@
                         <thead>
                         <tr>
                             <th>Наименование</th>
-                            <th>Товары</th>
+                            <th>Количество</th>
+                            <th>Стоимость</th>
                             <th>Детали</th>
                             <th>Редактировать</th>
                             <th>Удалить</th>
@@ -25,25 +26,27 @@
                         <tfoot>
                         <tr>
                             <th>Наименование</th>
-                            <th>Товары</th>
+                            <th>Количество</th>
+                            <th>Стоимость</th>
                             <th>Детали</th>
                             <th>Редактировать</th>
                             <th>Удалить</th>
                         </tr>
                         </tfoot>
                         <tbody>
-                        {% for category in objects %}
-                            <tr {% if not category.is_active %} style="opacity: 0.5;" {% endif %}>
-                                <td>{{ category.name }}</td>
-                                <td><a href="{% url 'admin_staff:products' category.pk %}">Товары</a></td>
+                        {% for product in objects %}
+                            <tr {% if not product.is_active %} style="opacity: 0.5;" {% endif %}>
+                                <td>{{ product.name }}</td>
+                                <td>{{ product.quantity }}</td>
+                                <td>{{ product.price }}</td>
                                 <td class="text-center">
-{#                                    <a href="{% url 'admin_staff:product_read' product.pk %}">Detail</a>#}
+                                    <a href="{% url 'admin_staff:product_read' product.pk %}">Detail</a>
                                 </td>
                                 <td class="text-center">
-{#                                    <a href="{% url 'admin_staff:product_update' product.pk %}">Edit</a>#}
+                                    <a href="{% url 'admin_staff:product_update' product.pk %}">Edit</a>
                                 </td>
                                 <td>
-                                    <a {% if not category.is_active %} class="invisible" {% endif %} href="{#% url 'admin_staff:product_delete' pk=product.id %#}">
+                                    <a {% if not product.is_active %} class="invisible" {% endif %} href="{% url 'admin_staff:product_delete' pk=product.id %}">
                                         <i class="fa fa-times-circle"></i>
                                     </a>
                                 </td>
@@ -54,8 +57,8 @@
                 </div>
             </div>
             <div class="card-footer">
-{#                <a href="{% url 'admin_staff:product_create' category.pk %}">#}
-                    <button class="btn btn-success">Создать категорию</button>
+                <a href="{% url 'admin_staff:product_create' category.pk %}">
+                    <button class="btn btn-success">Создать товар</button>
                 </a>
             </div>
         </div>

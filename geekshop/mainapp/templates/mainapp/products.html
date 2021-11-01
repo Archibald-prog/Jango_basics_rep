@@ -36,7 +36,7 @@
 			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product">
-						<img src="/media/{{ hot_product.image }}">
+						<img src="/media/{{ hot_product.image }}" style="width: 100%;">
 					</div>
 					<div class="slider-control">
 						<div class="block">
@@ -78,6 +78,23 @@
                             </h2>
                       {% endif %}
                   </div>
+				  <div class="paginator">
+                	{% if products.has_previous %}
+                    	<a href="{% url 'page' category.pk products.previous_page_number %}">
+                        <
+                    	</a>
+                	{% endif %}
+                	<span class="current">
+						страница {{ products.number }} из
+						{{ products.paginator.num_pages }}
+					</span>
+                	{% if products.has_next %}
+                    	<a href="{% url 'page' category.pk products.next_page_number %}">
+                        >
+                    	</a>
+					  {% endif %}
+				  </div>
+			</div>
                   <div class="category-products clearfix">
 
                     {% for product in products %}
@@ -103,7 +120,7 @@
 			<div class="related-products clearfix">
 				{% for same_product in same_products %}
 					<div class="block">
-						<a href="{% url 'detail' same_product.pk %}"><img src="/media/{{ same_product.image }}" alt="">
+						<a href="{% url 'detail' same_product.pk %}"><img src="/media/{{ same_product.image }}" alt="" style="width: 100%;">
 							<div class="text">
 								<img src="{% url 'detail' same_product.pk  %}" alt="img">
 								<h4>{{ same_product.name }}</h4>
