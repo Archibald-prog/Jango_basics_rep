@@ -96,7 +96,7 @@
 				  </div>
 			</div>
                   <div class="category-products clearfix">
-
+					<div class="tab-content">
                     {% for product in products %}
                       <div class="block">
                         <a href="{% url 'detail' product.pk %}">
@@ -109,6 +109,7 @@
                         </a>
                       </div>
                     {% endfor %}
+					</div>
                   </div>
             </div>
 		{% if same_products %}
